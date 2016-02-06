@@ -22,7 +22,8 @@ angular.module('starter.controllers', ['ngOpenFB'])
 })
 
 .controller('GeoCtrl', function($scope, $ionicModal, $timeout) {
-      document.getElementById("map").style.height = "800px";
+
+      document.getElementById("map").style.height = "100vh";
         var posOpts = {timeout: 10000, enableHighAccuracy: false};
         var latLng;
         var SSN1 = L.latLng(40.44112, -79.94247);
