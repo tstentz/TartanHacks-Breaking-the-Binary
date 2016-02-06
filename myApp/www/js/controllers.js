@@ -107,18 +107,18 @@ angular.module('starter.controllers', ['ngOpenFB'])
         
         }
       var circle1 = L.circleMarker(SSN1, { radius: 10, stroke: true,
-              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+              color: '#bd8cbf', weight: 3, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
       
       var circle2 = L.circleMarker(SSN2, { radius: 10, stroke: true,
-              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+              color: '#bd8cbf', weight: 3, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
       var circle3 = L.circleMarker(SSN3, { radius: 10, stroke: true,
-              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+              color: '#bd8cbf', weight: 3, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
       var circle4 = L.circleMarker(SSN4, { radius: 10, stroke: true,
-              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+              color: '#bd8cbf', weight: 3, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
       var circle5 = L.circleMarker(SSN5, { radius: 10, stroke: true,
-              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+              color: '#bd8cbf', weight: 3, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
       var circle6 = L.circleMarker(SSN6, { radius: 10, stroke: true,
-              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+              color: '#bd8cbf', weight: 3, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
 
       map.on('click', onMapClick);
       // $timeout(function() {
