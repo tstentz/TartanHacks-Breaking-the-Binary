@@ -22,14 +22,26 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.butt {
+   background-color: #6a416b;
+   height:50px;
+   border-radius: 10px;
+   width:50px;
+}
+
+.butt:hover {
+
+  background-color: #bd8cbf;
+}
+
 .groupcons{
     background: url('../img/icons.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 100%;
+    width: 90%;
     height: 65%;
-    margin: auto;
+    margin: 0;
     z-index: 0;
     position: relative;
   }
@@ -80,7 +92,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     margin: auto;
     z-index: 2;
     position: relative;
+
 }
+
 .welcome-card{
     padding-top:45px;
     padding-bottom:10px;
