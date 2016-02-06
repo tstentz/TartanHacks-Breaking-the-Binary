@@ -107,6 +107,16 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
     }
   })
 
+  .state('tab.resources', {
+    url: '/resources',
+    views: {
+      'tab-resources': {
+        templateUrl: 'templates/resources.html',
+        controller: 'AccountCtrl'
+      }
+    }
+  })
+
 
     .state('noMenu', {
       "url" : "/noMenu",

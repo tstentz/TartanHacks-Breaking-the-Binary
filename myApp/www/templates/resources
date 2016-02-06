@@ -1,0 +1,20 @@
+<ion-view view-title="ping">
+<ion-nav-bar class="bar-positive">
+
+<div class="row scroll">
+  <div class="col scroll-view"><button class="button button-block button-icon icon ion-ios-star"></button></div>
+  <div class="col scroll"><button class="button button-block button-icon icon ion-ios-star"></button></div>
+</div>
+<div class="row row-center scroll">
+  <div class="col scroll"><button class="button button-block button-icon icon ion-ios-star"></button></div>
+  <div class="col scroll"><button class="button button-block button-icon icon ion-ios-star"></button></div>
+</div>
+<div class="row row-bottom scroll">
+  <div class="col scroll"><button class="button button-block button-icon icon ion-ios-star"></button></div>
+  <div class="col scroll"><button class="button button-block button-icon icon ion-ios-star"></button></div>
+</div>
+
+
+
+</ion-nav-bar>
+</ion-view>
