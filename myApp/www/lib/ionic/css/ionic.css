@@ -1299,7 +1299,7 @@ xf@charset "UTF-8";
   content: ""; }
 
 .ion-calendar:before {
-  content: ""; }
+  content: "../../../img/cat.png"; }
 
 .ion-camera:before {
   content: ""; }

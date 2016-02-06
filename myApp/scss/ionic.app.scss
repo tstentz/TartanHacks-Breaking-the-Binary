@@ -22,6 +22,64 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.groupcons{
+    background: url('../img/icons.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 65%;
+    margin: auto;
+    z-index: 0;
+    position: relative;
+  }
+
+
+  .continue{
+    background: url('../img/YellowR.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 30%;
+    height: 10%;
+    margin: auto;
+    z-index: 0;
+    position: relative;
+  }
+.Sorg{
+    background: url('../img/Sorg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 54%;
+    height: 95%;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+  }
+
+  .faux-search{
+    background: url('../img/Rect4.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 70%;
+    height: 10%;
+    margin: auto;
+    z-index: 0;
+    position: relative;
+}
+.continue-text
+{
+    background: url('../img/CONTINUE.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    z-index: 2;
+    position: relative;
 
 // .welcome-card{
 //     padding-top:45px;
