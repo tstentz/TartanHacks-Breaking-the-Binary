@@ -22,7 +22,7 @@ angular.module('starter.controllers', ['ngOpenFB'])
 })
 
 
-.controller('GeoCtrl', function($scope, $ionicPopup, $timeout) {
+.controller('GeoCtrl', function($scope, $ionicPopup, $timeout, $window) {
 
       document.getElementById("map").style.height = "100vh";
         var posOpts = {timeout: 10000, enableHighAccuracy: false};
@@ -84,17 +84,21 @@ angular.module('starter.controllers', ['ngOpenFB'])
       //Personal Groups
       $scope.personalGroups = function() {
         $scope.myPopup.close();
+        // $window.location.replace('/#/tab/contacts');
+        $window.location.replace('../img/bell.png');
       };
 
       //Nearest Available
       $scope.nearestAvailable = function() {
         $scope.myPopup.close();
         $scope.hold_on_information = $ionicPopup.show({
-            template: '<ion-spinner></ion-spinner>',
             title: 'Contacting nearest SSN mentor',
             subTitle: 'Thank you for doing the right thing and acting on the situation. You will be anonymously be connected to a trained SSN peer mentor as soon as possible who can provide advice that is situation specific',
             scope: $scope,
           });
+        $timeout(function() {
+             $scope.hold_on_information.close(); //close the popup after 3 seconds for some reason
+          }, 3000);
       };
 
       // Perform the login action when the user submits the login form
