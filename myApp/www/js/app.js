@@ -55,7 +55,7 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
       }
     }
   })
-  .state('tab.login', {
+  /*.state('tab.login', {
     url: '/login',
     views: {
       'tab-login': {
@@ -63,7 +63,7 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
          controller: 'LoginCtrl' //to implement the controller!!! OAuth!
       }
     }
-   })
+   })*/
   // Each tab has its own nav history stack:
 
   .state('tab.dash', {
@@ -76,7 +76,7 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
     }
   })
 
-  .state('tab.chats', {
+ /* .state('tab.chats', {
       url: '/chats',
       views: {
         'tab-chats': {
@@ -93,10 +93,10 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
           controller: 'ChatDetailCtrl'
         }
       }
-    })
+    })*/
 
   .state('tab.account', {
-    url: '/resources',
+    url: '/account',
     views: {
       'tab-account': {
         templateUrl: 'templates/tab-account.html',
@@ -104,7 +104,7 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
       }
     }
   })
-
+    
   .state('tab.resources', {
     url: '/resources',
     views: {
