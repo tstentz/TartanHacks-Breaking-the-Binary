@@ -57,30 +57,33 @@
 }
 
 .popup-head {
-  padding: 15px 10px;
-  border-bottom: 1px solid #eee;
+  padding: 5px;
+  border-bottom: 1px solid #6a416b;
   text-align: center;
 }
 .popup-title {
   margin: 0;
-  padding: 0;
-  font-size: 15px;
+  padding-top: 13px;
+  padding-bottom: -10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 .popup-sub-title {
   margin: 5px 0 0 0;
   padding: 0;
-  font-weight: normal;
+  font-weight: 800;
   font-size: 11px;
 }
 .popup-body {
-  padding: 10px;
+  padding: 5px;
   overflow: auto;
 }
 
 .popup-buttons {
   @include display-flex();
   @include flex-direction(row);
-  padding: 10px;
   min-height: $popup-button-min-height + 20;
 
   .button {
@@ -89,7 +92,7 @@
     min-height: $popup-button-min-height;
     border-radius: $popup-button-border-radius;
     line-height: $popup-button-line-height;
-
+    text-transform: uppercase;
     margin-right: 5px;
     &:last-child {
       margin-right: 0px;

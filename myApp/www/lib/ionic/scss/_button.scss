@@ -250,3 +250,18 @@ a.button {
   cursor: default !important;
   pointer-events: none;
 }
+
+.button.button-energized {
+    border-color: transparent;
+    background-color: #ffc900;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 800;}
+
+button.button-block,
+button.button-full,
+.button-full > button.button,
+input.button.button-block {
+  width: 90%;
+  margin-left:13px; }
+
