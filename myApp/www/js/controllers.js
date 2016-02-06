@@ -2,6 +2,17 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {
     console.log("hi");})
+
+.controller('AppCtrl', function($scope) {
+  $scope.loginData = {};
+
+  // currently redirects any user through to the app. 
+  // TODO: Implement FB authentication
+  $scope.dummy_sign_in = function() {
+    window.location.replace('#/tab/dash');
+  };
+})
+
 .controller('GeoCtrl', function($scope) {
         var posOpts = {timeout: 10000, enableHighAccuracy: false};
         var latLng;
@@ -35,11 +46,8 @@ angular.module('starter.controllers', [])
 
       map.on('click', onMapClick);
 
-
-
-  
-
 })
+
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
