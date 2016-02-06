@@ -33,6 +33,7 @@ $tiff:                            #6a416b !default;
   src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("../lib/ionic/fonts/ionicons.ttf?v=2.0.1") format("truetype"), url("../lib/ionic/fonts/ionicons.woff?v=2.0.1") format("woff"), url("../lib/ionic/fonts/ionicons.woff") format("woff"), url("../lib/ionic/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 /*
 .glass{
     background: url('../img/glass.png');
@@ -115,6 +116,7 @@ $tiff:                            #6a416b !default;
     z-index: 2;
     position: relative;
   }
+
 .ion, .ionicons,
 .ion-alert:before,
 .ion-alert-circled:before,
@@ -860,10 +862,6 @@ $tiff:                            #6a416b !default;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-
-.ion-alert-cat:before {
-  content: url('../img/cat.png') !important;
-}
 
 .ion-alert:before {
   content: ""; }
@@ -1763,7 +1761,7 @@ $tiff:                            #6a416b !default;
   content: ""; }
 
 .ion-ios-calendar:before {
-  content: url('../img/cat.png'); }
+  content: ""; }
 
 .ion-ios-calendar-outline:before {
   content: ""; }
@@ -3421,14 +3419,11 @@ body,
   overflow: hidden;
   margin: 0;
   padding: 0;
-
-  color: #FFF;
-
   color: #6a416b;
   word-wrap: break-word;
   font-size: 14px;
   font-family: -apple-system;
-  font-family: "Avenir", "Avenir", "Roboto", "Segoe UI", sans-serif;
+  font-family: "-apple-system", "Avenir", "Roboto", "Segoe UI", sans-serif;
   line-height: 20px;
   text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
@@ -3980,8 +3975,13 @@ a.subdued {
   border-width: 0;
   border-style: solid;
   border-top: 1px solid transparent;
+<<<<<<< HEAD
+  border-bottom: 1px solid #ddd;
+  background-color: white;
+=======
   border-bottom: 1px solid none;
   background-color: #6a416b;
+>>>>>>> 1b522252c57d0f3e43f196c582036a6ae3da7630
   /* border-width: 1px will actually create 2 device pixels on retina */
   /* this nifty trick sets an actual 1px border on hi-res displays */
   background-size: 0; }
@@ -4009,11 +4009,11 @@ a.subdued {
       background: transparent; }
   .bar.bar-light {
     border-color: #ddd;
-    background-color: #6a416b;
+    background-color: white;
     background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
     color: #444; }
     .bar.bar-light .title {
-      color: #fff; }
+      color: #444; }
     .bar.bar-light.bar-footer {
       background-image: linear-gradient(180deg, #ddd, #ddd 50%, transparent 50%); }
   .bar.bar-stable {
@@ -4026,8 +4026,8 @@ a.subdued {
     .bar.bar-stable.bar-footer {
       background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%); }
   .bar.bar-positive {
-    border-color: #6a416b;
-    background-color: #6a416b;
+    border-color: #0c60ee;
+    background-color: #387ef5;
     background-image: linear-gradient(0deg, #0c60ee, #0c60ee 50%, transparent 50%);
     color: #fff; }
     .bar.bar-positive .title {
@@ -4102,9 +4102,14 @@ a.subdued {
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
+<<<<<<< HEAD
+    font-size: 17px;
+    font-weight: 500;
+=======
     font-size: 24px;
     color: #fff;
     font-weight: 900;
+>>>>>>> 1b522252c57d0f3e43f196c582036a6ae3da7630
     line-height: 44px; }
     .bar .title.title-left {
       text-align: left; }
@@ -5160,7 +5165,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
   white-space: nowrap;
   font-weight: 400;
   font-size: 14px;
-  font-family: "Avenir-bold", "Roboto", "Segoe UI", sans-serif;
+  font-family: "-apple-system", "Avenir", "Roboto", "Segoe UI", sans-serif;
   opacity: 0.7; }
   .tab-item:hover {
     cursor: pointer; }
@@ -5609,7 +5614,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     max-width: 100%;
     max-height: 90%;
     border-radius: 0px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #6a416b;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -5627,23 +5632,27 @@ ion-tabs.tabs-color-active-dark .tab-item {
     width: 100%; }
 
 .popup-head {
-  padding: 15px 10px;
-  border-bottom: 1px solid #eee;
+  padding: 5px;
+  border-bottom: 1px solid #6a416b;
   text-align: center; }
 
 .popup-title {
   margin: 0;
-  padding: 0;
-  font-size: 15px; }
+  padding-top: 13px;
+  padding-bottom: -10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase; }
 
 .popup-sub-title {
   margin: 5px 0 0 0;
   padding: 0;
-  font-weight: normal;
+  font-weight: 800;
   font-size: 11px; }
 
 .popup-body {
-  padding: 10px;
+  padding: 5px;
   overflow: auto; }
 
 .popup-buttons {
@@ -5659,7 +5668,6 @@ ion-tabs.tabs-color-active-dark .tab-item {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  padding: 10px;
   min-height: 65px; }
   .popup-buttons .button {
     -webkit-box-flex: 1;
@@ -5672,6 +5680,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     min-height: 45px;
     border-radius: 2px;
     line-height: 20px;
+    text-transform: uppercase;
     margin-right: 5px; }
     .popup-buttons .button:last-child {
       margin-right: 0px; }
@@ -8609,17 +8618,17 @@ progress {
  */
 .button {
   border-color: transparent;
-  background-color: #6a416b;
+  background-color: #f8f8f8;
   color: #444;
   position: relative;
   display: inline-block;
-  margin: 50;
-  padding: 0 50px;
-  /*min-width: 52px;*/
-  /*min-height: 47px;*/
+  margin: 0;
+  padding: 0 12px;
+  min-width: 52px;
+  min-height: 47px;
   border-width: 1px;
   border-style: solid;
-  border-radius: 50%;
+  border-radius: 4px;
   vertical-align: top;
   text-align: center;
   text-overflow: ellipsis;
@@ -8633,7 +8642,7 @@ progress {
     background-color: #e5e5e5; }
   .button:after {
     position: absolute;
-    top: 10px;
+    top: -6px;
     right: -6px;
     bottom: -6px;
     left: -6px;
@@ -8643,7 +8652,7 @@ progress {
     pointer-events: none; }
   .button .icon:before, .button.icon:before, .button.icon-left:before, .button.icon-right:before {
     display: inline-block;
-    padding: 0 0 10px 0;
+    padding: 0 0 1px 0;
     vertical-align: inherit;
     font-size: 24px;
     line-height: 41px;
@@ -8989,6 +8998,20 @@ a.button {
   opacity: .4;
   cursor: default !important;
   pointer-events: none; }
+
+.button.button-energized {
+  border-color: transparent;
+  background-color: #ffc900;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 800; }
+
+button.button-block,
+button.button-full,
+.button-full > button.button,
+input.button.button-block {
+  width: 90%;
+  margin-left: 13px; }
 
 /**
  * Button Bar
@@ -9821,6 +9844,61 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.groupcons {
+  background: url("../img/icons.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 65%;
+  margin: auto;
+  z-index: 0;
+  position: relative; }
+
+.continue {
+  background: url("../img/YellowR.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 30%;
+  height: 10%;
+  margin: auto;
+  z-index: 0;
+  position: relative; }
+
+.Sorg {
+  background: url("../img/Sorg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 54%;
+  height: 95%;
+  margin: auto;
+  z-index: 2;
+  position: relative; }
+
+.faux-search {
+  background: url("../img/Rect4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 70%;
+  height: 10%;
+  margin: auto;
+  z-index: 0;
+  position: relative; }
+
+.continue-text {
+  background: url("../img/CONTINUE.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 60%;
+  height: 80%;
+  margin: auto;
+  z-index: 2;
+  position: relative; }
+
 .welcome-card {
   padding-top: 45px;
   padding-bottom: 10px;
@@ -9927,6 +10005,3 @@ a.button {
   position: absolute;
   right: 50%;
   top: 95%; }
-
-
-
