@@ -21,7 +21,7 @@ angular.module('starter.controllers', ['ngOpenFB'])
     };
 })
 
-.controller('GeoCtrl', function($scope, $ionicModal) {
+.controller('GeoCtrl', function($scope, $ionicModal, $timeout) {
       document.getElementById("map").style.height = "800px";
         var posOpts = {timeout: 10000, enableHighAccuracy: false};
         var latLng;
@@ -72,19 +72,19 @@ angular.module('starter.controllers', ['ngOpenFB'])
       //Emergency Reporting
       $scope.emergencyReport = function() {
         console.log("Kappa Rho");
-        doLogin();
+        $scope.doLogin();
       };
 
       //Personal Groups
       $scope.personalGroups = function() {
         console.log("Do good");
-        doLogin();
+        $scope.doLogin();
       };
 
       //Nearest Available
       $scope.nearestAvailable = function() {
         console.log("Truth, courage, faith, power");
-        doLogin();
+        $scope.doLogin();
       };
 
       // Perform the login action when the user submits the login form
@@ -120,7 +120,9 @@ angular.module('starter.controllers', ['ngOpenFB'])
               color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
 
       map.on('click', onMapClick);
-      $timeout(ping_pop_up, 1000);
+      // $timeout(function() {
+      //     $scope.ping_pop_up();
+      //   }, 4000);
 
 })
 
