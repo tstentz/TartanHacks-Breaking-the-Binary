@@ -1,16 +1,24 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngOpenFB'])
 
 .controller('DashCtrl', function($scope) {
     console.log("hi");})
 
-.controller('AppCtrl', function($scope) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, ngFB) {
   $scope.loginData = {};
 
   // currently redirects any user through to the app. 
   // TODO: Implement FB authentication
-  $scope.dummy_sign_in = function() {
-    window.location.replace('#/tab/dash');
-  };
+  $scope.fbLogin = function () {
+    ngFB.login({scope: 'email,public_profile,publish_actions'}).then(
+      function (response) {
+        if (response.status === 'connected') {
+          console.log('Facebook login succeeded');
+              $scope.closeLogin();
+          } else {
+              alert('Facebook login failed');
+          }
+      });
+    };
 })
 
 .controller('GeoCtrl', function($scope) {
