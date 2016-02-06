@@ -7,7 +7,6 @@ angular.module('starter.controllers', ['ngOpenFB'])
   $scope.loginData = {};
 
   // currently redirects any user through to the app. 
-  // TODO: Implement FB authentication
   $scope.fbLogin = function () {
     ngFB.login({scope: 'email,public_profile,publish_actions'}).then(
       function (response) {
@@ -22,11 +21,18 @@ angular.module('starter.controllers', ['ngOpenFB'])
     };
 })
 
-.controller('GeoCtrl', function($scope, $ionicModal) {
-      console.log(document.getElementById("map").style.height = "800px");
+.controller('GeoCtrl', function($scope) {
+      document.getElementById("map").style.height = "800px";
         var posOpts = {timeout: 10000, enableHighAccuracy: false};
         var latLng;
-        function showPosition(position) {
+        var SSN1 = L.latLng(40.44112, -79.94247);
+        var SSN2 = L.latLng(40.44234, -79.94461);
+        var SSN3 = L.latLng(40.44172, -79.94646);
+        var SSN4 = L.latLng(40.44323, -79.94224);
+        var SSN5 = L.latLng(40.44333, -79.94225);
+        var SSN6 = L.latLng(40.44290, -79.94218);
+
+      function showPosition(position) {
             console.log(position.timestamp);
             console.log(position.coords.latitude);
             console.log(position.coords.longitude);
@@ -93,8 +99,24 @@ angular.module('starter.controllers', ['ngOpenFB'])
       function onMapClick(e) {
         console.log(latLng);
         map.setView(latLng);
+        alert(e.latlng);
+        console.log('here');
         
         }
+      var circle1 = L.circleMarker(SSN1, { radius: 10, stroke: true,
+              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+      
+      var circle2 = L.circleMarker(SSN2, { radius: 10, stroke: true,
+              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+      var circle3 = L.circleMarker(SSN3, { radius: 10, stroke: true,
+              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+      var circle4 = L.circleMarker(SSN4, { radius: 10, stroke: true,
+              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+      var circle5 = L.circleMarker(SSN5, { radius: 10, stroke: true,
+              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+      var circle6 = L.circleMarker(SSN6, { radius: 10, stroke: true,
+              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+
       map.on('click', onMapClick);
       $timeout(ping_pop_up, 1000);
 
