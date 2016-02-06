@@ -6,14 +6,15 @@ in ionic's _variables.scss file.
 For example, you might change some of the default colors:
 
 $light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
+$stable:                          #8f8f8f !default;
 $positive:                        #387ef5 !default;
 $calm:                            #11c1f3 !default;
 $balanced:                        #33cd5f !default;
 $energized:                       #ffc900 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #886aea !default;
-$dark:                            #444 !default;
+$dark:                            #444    !default;
+$tiff:                            #6a416b !default;
 */
 /*!
   Ionicons, v2.0.1
@@ -3409,7 +3410,10 @@ body,
   overflow: hidden;
   margin: 0;
   padding: 0;
-  color: #;
+
+  color: #FFF;
+
+  color: #6a416b;
   word-wrap: break-word;
   font-size: 14px;
   font-family: -apple-system;
@@ -3669,7 +3673,7 @@ cite {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #000;
+  color: #6a416b;
   font-weight: 500;
   font-family: "-apple-system", "Avenir", "Roboto", "Segoe UI", sans-serif;
   line-height: 1.2; }
@@ -9806,6 +9810,50 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.welcome-card {
+  padding-top: 45px;
+  padding-bottom: 10px;
+  margin-top: 30%;
+  margin-right: 18px;
+  margin-left: 18px; }
+
+.welcome-text {
+  text-align: center;
+  border-width: 0px; }
+
+.welcome-user {
+  font-weight: bold; }
+
+.user-photo-card {
+  position: absolute;
+  z-index: 9999;
+  margin-left: 39.5%;
+  align-content: center;
+  top: -25%;
+  box-shadow: 0px 5px 10px #c5c5c5; }
+
+.user-photo {
+  padding: 3px;
+  height: 85px; }
+
+.food-button {
+  left: 20%;
+  border-radius: 50%;
+  box-shadow: 0px 3px 3px #c5c5c5; }
+
+.button-icon-home {
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 15px; }
+
+.button-col {
+  align-content: center; }
+
+.food-text {
+  padding-top: 10px;
+  margin: auto;
+  font-weight: bold; }
+
 #login-logo {
   width: 110px;
   height: 110px;
@@ -9856,7 +9904,8 @@ a.button {
 
 #account-maintainence {
   color: #D7D6D6;
-  margin: auto; }
+  margin: auto;
+  width: 230px; }
   #account-maintainence :first-child span {
     margin-left: 32%; }
 

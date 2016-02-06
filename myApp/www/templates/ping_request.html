@@ -1,0 +1,41 @@
+<!-- <ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Ping Request</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closePingRequest()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+  </ion-content>
+</ion-modal-view> -->
+<ion-view>
+  <ion-content>
+  <div class="user-photo-card center card">
+    <div class="user-photo item">
+      <img ng-src="{{userImage}}" width="80">
+    </div>
+  </div>
+  <div class="welcome-card card">
+    <div class="item item-text-wrap welcome-text">
+      <span >Ping Request<span> 
+    </div>
+      <div class="list">
+        <label class="item">
+            <button class="button button-block button-positive" ng-click="nearestAvailable()">
+            Nearest Available
+            </button>
+        </label>
+        <label class="item">
+            <button class="button button-block button-positive" ng-click="personalGroups()">
+            Personal Groups
+            </button>
+        </label>
+        <label class="item">
+            <button class="button button-block button-positive" ng-click="emergencyReport()">
+            Emergency Report
+            </button>
+        </label>
+      </div>
+  </div>
+  </ion-content>
+</ion-view>
