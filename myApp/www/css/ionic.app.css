@@ -6,14 +6,14 @@ in ionic's _variables.scss file.
 For example, you might change some of the default colors:
 
 $light:                           #fff !default;
-$stable:                          #8f8f8f !default;
-$positive:                        #387ef5 !default;
-$calm:                            #11c1f3 !default;
-$balanced:                        #33cd5f !default;
-$energized:                       #ffc900 !default;
-$assertive:                       #ef473a !default;
-$royal:                           #886aea !default;
-$dark:                            #444    !default;
+$stable:                          #6a416b !default;
+$positive:                        #6a416b !default;
+$calm:                            #6a416b !default;
+$balanced:                        #6a416b !default;
+$energized:                       #6a416b !default;
+$assertive:                       #6a416b !default;
+$royal:                           #6a416b !default;
+$dark:                            #6a416b !default;
 $tiff:                            #6a416b !default;
 */
 /*!
@@ -33,89 +33,6 @@ $tiff:                            #6a416b !default;
   src: url("../lib/ionic/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("../lib/ionic/fonts/ionicons.ttf?v=2.0.1") format("truetype"), url("../lib/ionic/fonts/ionicons.woff?v=2.0.1") format("woff"), url("../lib/ionic/fonts/ionicons.woff") format("woff"), url("../lib/ionic/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal; }
-
-/*
-.glass{
-    background: url('../img/glass.png');
-    background-repeat: no-repeat;
-    background-size: 30px 0;
-    background-position: left;
-    width: 10%;
-    height: 100%;
-    z-index: 0;
-    position: relative;
-  }*/
-  .butt {
-   background-color: #6a416b;
-   height:50px;
-   border-radius: 10px;
-   width:50px;
-}
-
-.butt:hover {
-
-  background-color: #bd8cbf;
-}
-
-.groupcons{
-    background: url('../img/icons.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 90%;
-    height: 65%;
-    margin: 0;
-    z-index: 0;
-    position: relative;
-  }
-
-
-  .continue{
-    background: url('../img/YellowR.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 30%;
-    height: 10%;
-    margin: auto;
-    z-index: 0;
-    position: relative;
-  }
-.Sorg{
-    background: url('../img/Sorg.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 54%;
-    height: 95%;
-    margin: auto;
-    z-index: 2;
-    position: relative;
-  }
-
-  .faux-search{
-    background: url('../img/Rect4.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 70%;
-    height: 10%;
-    margin: auto;
-    z-index: 0;
-    position: relative;
-}
-.continue-text
-{
-    background: url('../img/CONTINUE.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 60%;
-    height: 80%;
-    margin: auto;
-    z-index: 2;
-    position: relative;
-  }
 
 .ion, .ionicons,
 .ion-alert:before,
@@ -3975,13 +3892,8 @@ a.subdued {
   border-width: 0;
   border-style: solid;
   border-top: 1px solid transparent;
-<<<<<<< HEAD
   border-bottom: 1px solid #ddd;
   background-color: white;
-=======
-  border-bottom: 1px solid none;
-  background-color: #6a416b;
->>>>>>> 1b522252c57d0f3e43f196c582036a6ae3da7630
   /* border-width: 1px will actually create 2 device pixels on retina */
   /* this nifty trick sets an actual 1px border on hi-res displays */
   background-size: 0; }
@@ -4102,14 +4014,8 @@ a.subdued {
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-<<<<<<< HEAD
     font-size: 17px;
     font-weight: 500;
-=======
-    font-size: 24px;
-    color: #fff;
-    font-weight: 900;
->>>>>>> 1b522252c57d0f3e43f196c582036a6ae3da7630
     line-height: 44px; }
     .bar .title.title-left {
       text-align: left; }
@@ -7585,15 +7491,15 @@ input,
 button,
 select,
 textarea {
-  font-weight: bold;
-  font-size: 24px;
+  font-weight: normal;
+  font-size: 14px;
   line-height: 1.42857; }
 
 input,
 button,
 select,
 textarea {
-  font-family: "Avenir-bold", "Avenir", "Roboto", "Segoe UI", sans-serif; }
+  font-family: "-apple-system", "Avenir", "Roboto", "Segoe UI", sans-serif; }
 
 .item-input {
   display: -webkit-box;
@@ -10005,3 +9911,32 @@ input.button.button-block {
   position: absolute;
   right: 50%;
   top: 95%; }
+
+.bar .title {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+  margin: 0 10px;
+  min-width: 30px;
+  height: 43px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 800;
+  line-height: 44px; }
+
+.bar .title.title-left {
+  text-align: left; }
+
+.bar .title.title-right {
+  text-align: right; }
+
+.popup-sub-title {
+  color: white;
+  font-weight: 500; }
