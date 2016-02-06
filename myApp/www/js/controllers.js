@@ -44,7 +44,7 @@ angular.module('starter.controllers', ['ngOpenFB'])
             console.log("There was an error");
         }
         var obj = navigator.geolocation.getCurrentPosition(showPosition, showError, posOpts);
-      L.accessToken = 'pk.eyJ1IjoidHN0ZW50eiIsImEiOiJjaWthc3I3b2kwbTNjdjlrdTdsZjVteGR3In0.DeiyyAsdV3HZdO3YvSA68g';
+       L.accessToken = 'pk.eyJ1IjoidHN0ZW50eiIsImEiOiJjaWthc3I3b2kwbTNjdjlrdTdsZjVteGR3In0.DeiyyAsdV3HZdO3YvSA68g';
     // Replace 'mapbox.streets' with your map id.
       var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=' + L.accessToken, {
           attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
@@ -95,12 +95,10 @@ angular.module('starter.controllers', ['ngOpenFB'])
 
       var map = L.map('map')
           .addLayer(mapboxTiles)
-          .setView([40, -79], 15); 
+          .setView([40.442, -79.943], 17); 
       function onMapClick(e) {
         console.log(latLng);
         map.setView(latLng);
-        alert(e.latlng);
-        console.log('here');
         
         }
       var circle1 = L.circleMarker(SSN1, { radius: 10, stroke: true,
