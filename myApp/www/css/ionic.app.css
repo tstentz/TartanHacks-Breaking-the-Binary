@@ -4092,8 +4092,8 @@ a.subdued {
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 24px;
-    color: #444;
-    font-weight: 500;
+    color: #fff;
+    font-weight: 900;
     line-height: 44px; }
     .bar .title.title-left {
       text-align: left; }
