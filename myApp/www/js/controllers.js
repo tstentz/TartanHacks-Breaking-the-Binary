@@ -7,7 +7,6 @@ angular.module('starter.controllers', ['ngOpenFB'])
   $scope.loginData = {};
 
   // currently redirects any user through to the app. 
-  // TODO: Implement FB authentication
   $scope.fbLogin = function () {
     ngFB.login({scope: 'email,public_profile,publish_actions'}).then(
       function (response) {
@@ -51,6 +50,49 @@ angular.module('starter.controllers', ['ngOpenFB'])
           attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
       });
 
+      $ionicModal.fromTemplateUrl('templates/ping_request.html', {
+        scope: $scope
+      }).then(function(modal) {
+        $scope.modal = modal;
+      });
+
+      // Triggered in the login modal to close it
+      $scope.closePingRequest = function() {
+        $scope.modal.hide();
+      };
+
+      // Open the login modal
+      $scope.ping_pop_up = function() {
+        $scope.modal.show();
+      };
+
+      //Emergency Reporting
+      $scope.emergencyReport = function() {
+        console.log("Kappa Rho");
+        doLogin();
+      };
+
+      //Personal Groups
+      $scope.personalGroups = function() {
+        console.log("Do good");
+        doLogin();
+      };
+
+      //Nearest Available
+      $scope.nearestAvailable = function() {
+        console.log("Truth, courage, faith, power");
+        doLogin();
+      };
+
+      // Perform the login action when the user submits the login form
+      $scope.doLogin = function() {
+        // Simulate a login delay. Remove this and replace with your login
+        // code if using a login system
+        $timeout(function() {
+          $scope.closeLogin();
+        }, 1000);
+      };
+
       var map = L.map('map')
           .addLayer(mapboxTiles)
           .setView([40.442, -79.943], 17); 
@@ -74,6 +116,7 @@ angular.module('starter.controllers', ['ngOpenFB'])
               color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
 
       map.on('click', onMapClick);
+      $timeout(ping_pop_up, 1000);
 
 })
 

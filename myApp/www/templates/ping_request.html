@@ -1,0 +1,27 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Ping Request</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closePingRequest()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+      <div class="list">
+        <label class="item">
+            <button class="button button-block button-positive" ng-click="nearestAvailable()">
+            Nearest Available
+            </button>
+        </label>
+        <label class="item">
+            <button class="button button-block button-positive" ng-click="personalGroups()">
+            Personal Groups
+            </button>
+        </label>
+        <label class="item">
+            <button class="button button-block button-positive" ng-click="emergencyReport()">
+            Emergency Report
+            </button>
+        </label>
+      </div>
+  </ion-content>
+</ion-modal-view>
