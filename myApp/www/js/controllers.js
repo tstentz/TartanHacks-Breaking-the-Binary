@@ -23,7 +23,8 @@ angular.module('starter.controllers', ['ngOpenFB'])
 
 .controller('ContactCtrl', function($scope, $ionicPopup, $timeout, $window) {
     $scope.someStuff = function() {
-      $window.location.replace('../img/board2.png');
+      $window.location.replace('../templates/lastpage.html');
+
       // $scope.myPopup = $ionicPopup.show({
       //     template: '<img src="../img/board2.p" class="button button-full button-energized" ng-click="nearestAvailable()">Nearest Available</button><button class="button button-full button-energized" ng-click="personalGroups()">Personal Groups</button><button class="button button-full button-energized" ng-click="emergencyReport()">Emergency</button>',
       //     cssClass: 'popup-color',
