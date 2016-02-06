@@ -6,22 +6,22 @@ angular.module('starter.services', [])
   // Some fake testing data
   var chats = [{
     id: 0,
-    name: 'Ben Sparrow',
+    name: 'Nikhil',
     lastText: 'You on your way?',
     face: 'img/ben.png'
   }, {
     id: 1,
-    name: 'Max Lynx',
+    name: 'Tara',
     lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
+    face: 'img/tara.jpg'
   }, {
     id: 2,
-    name: 'Adam Bradleyson',
+    name: 'Tiffany',
     lastText: 'I should buy a boat',
     face: 'img/adam.jpg'
   }, {
     id: 3,
-    name: 'Perry Governor',
+    name: 'Melody',
     lastText: 'Look at my mukluks!',
     face: 'img/perry.png'
   }, {
@@ -48,3 +48,10 @@ angular.module('starter.services', [])
     }
   };
 });
+
+
+
+
+
+
+
