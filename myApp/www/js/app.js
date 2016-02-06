@@ -55,13 +55,6 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
       }
     }
   })
-  .state('tab.resources', {
-    url: '/resources',
-    templateUrl: 'templates/tab-resources.html'
-  
-  })
-
-
   .state('tab.login', {
     url: '/login',
     views: {
@@ -107,6 +100,16 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
     views: {
       'tab-account': {
         templateUrl: 'templates/tab-account.html',
+        controller: 'AccountCtrl'
+      }
+    }
+  })
+
+  .state('tab.resources', {
+    url: '/resources',
+    views: {
+      'tab-resources': {
+        templateUrl: 'templates/resources.html',
         controller: 'AccountCtrl'
       }
     }
