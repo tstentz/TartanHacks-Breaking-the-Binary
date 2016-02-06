@@ -55,17 +55,15 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
       }
     }
   })
-
-
   .state('tab.login', {
     url: '/login',
     views: {
       'tab-login': {
-        templateUrl: 'templates/login.html'
-        // controller: 'LoginCtrl' //to implement the controller!!! OAuth!
+        templateUrl: 'templates/login.html',
+         controller: 'LoginCtrl' //to implement the controller!!! OAuth!
       }
     }
-  })
+   })
   // Each tab has its own nav history stack:
 
   .state('tab.dash', {
@@ -98,10 +96,20 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
     })
 
   .state('tab.account', {
-    url: '/account',
+    url: '/resources',
     views: {
       'tab-account': {
         templateUrl: 'templates/tab-account.html',
+        controller: 'AccountCtrl'
+      }
+    }
+  })
+
+  .state('tab.resources', {
+    url: '/resources',
+    views: {
+      'tab-resources': {
+        templateUrl: 'templates/resources.html',
         controller: 'AccountCtrl'
       }
     }

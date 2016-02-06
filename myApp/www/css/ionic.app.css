@@ -34,6 +34,89 @@ $tiff:                            #6a416b !default;
   font-weight: normal;
   font-style: normal; }
 
+/*
+.glass{
+    background: url('../img/glass.png');
+    background-repeat: no-repeat;
+    background-size: 30px 0;
+    background-position: left;
+    width: 10%;
+    height: 100%;
+    z-index: 0;
+    position: relative;
+  }*/
+  .butt {
+   background-color: #6a416b;
+   height:50px;
+   border-radius: 10px;
+   width:50px;
+}
+
+.butt:hover {
+
+  background-color: #bd8cbf;
+}
+
+.groupcons{
+    background: url('../img/icons.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 90%;
+    height: 65%;
+    margin: 0;
+    z-index: 0;
+    position: relative;
+  }
+
+
+  .continue{
+    background: url('../img/YellowR.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 30%;
+    height: 10%;
+    margin: auto;
+    z-index: 0;
+    position: relative;
+  }
+.Sorg{
+    background: url('../img/Sorg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 54%;
+    height: 95%;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+  }
+
+  .faux-search{
+    background: url('../img/Rect4.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 70%;
+    height: 10%;
+    margin: auto;
+    z-index: 0;
+    position: relative;
+}
+.continue-text
+{
+    background: url('../img/CONTINUE.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+  }
+
 .ion, .ionicons,
 .ion-alert:before,
 .ion-alert-circled:before,
@@ -3892,8 +3975,13 @@ a.subdued {
   border-width: 0;
   border-style: solid;
   border-top: 1px solid transparent;
+<<<<<<< HEAD
   border-bottom: 1px solid #ddd;
   background-color: white;
+=======
+  border-bottom: 1px solid none;
+  background-color: #6a416b;
+>>>>>>> 1b522252c57d0f3e43f196c582036a6ae3da7630
   /* border-width: 1px will actually create 2 device pixels on retina */
   /* this nifty trick sets an actual 1px border on hi-res displays */
   background-size: 0; }
@@ -4014,8 +4102,14 @@ a.subdued {
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
+<<<<<<< HEAD
     font-size: 17px;
     font-weight: 500;
+=======
+    font-size: 24px;
+    color: #fff;
+    font-weight: 900;
+>>>>>>> 1b522252c57d0f3e43f196c582036a6ae3da7630
     line-height: 44px; }
     .bar .title.title-left {
       text-align: left; }
@@ -7491,15 +7585,15 @@ input,
 button,
 select,
 textarea {
-  font-weight: normal;
-  font-size: 14px;
+  font-weight: bold;
+  font-size: 24px;
   line-height: 1.42857; }
 
 input,
 button,
 select,
 textarea {
-  font-family: "-apple-system", "Avenir", "Roboto", "Segoe UI", sans-serif; }
+  font-family: "Avenir-bold", "Avenir", "Roboto", "Segoe UI", sans-serif; }
 
 .item-input {
   display: -webkit-box;

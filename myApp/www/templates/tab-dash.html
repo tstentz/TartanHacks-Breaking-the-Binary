@@ -1,7 +1,7 @@
 <ion-view view-title="ping">
 
   <h2>Welcome to Ionic</h2>
-    <ion-view title="Maps">
+    <ion-view title="ping">
       <search-bar ng-model="search"></search-bar>
       <ion-content class="has-header padding">
             <p>This is state 1</p>
@@ -9,19 +9,28 @@
           <ul>
             <li ng-repeat="d in data|filter:search.txt">{{d}}</li>
           </ul>
-          <br/><br/>
-          <div class="button" ui-sref="noMenu.simplePage">Go To Simple Page</div>
-        </ion-content>
-    </ion-view>
+                  <br/><br/>
+                </ion-content>
+                </ion-view>
+
+
 <ion-side-menus>
 <ion-side-menu-content>
         <ion-header-bar class="bar-dark">
-        <h1 class="title">myApp</h1>
-            </ion-header-bar>
+        <h1 class="title">ping</h1>
+        
+        </ion-header-bar>
+        <ion-content>
+
+        </ion-content>
             <ion-content>
-        <div id="map"</div>
-  </ion-content>
-</ion-view>
+            <div id="map" style="position: relative; z-index: 1;">
+                    <a href="#" onMouseUp="ping_pop_up()">
+                    <img name= "bell" src = "img/bell.png" style="width: 85px; height: 80px; position: absolute; z-index: 2; bottom: 0px; right: 0px; margin-bottom: 120px; margin-right: 30px;">
+            </div>
+
+        </ion-content>
+  </ion-view>
 {# <ion-list>
 </ion-list>
- #}
+#}

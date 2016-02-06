@@ -21,8 +21,10 @@ angular.module('starter.controllers', ['ngOpenFB'])
     };
 })
 
-.controller('GeoCtrl', function($scope, $ionicPopup, $timeout) {
-      document.getElementById("map").style.height = "800px";
+
+.controller('GeoCtrl', function($scope, $ionicModal, $timeout) {
+
+      document.getElementById("map").style.height = "100vh";
         var posOpts = {timeout: 10000, enableHighAccuracy: false};
         var latLng;
         var SSN1 = L.latLng(40.44112, -79.94247);
@@ -40,10 +42,13 @@ angular.module('starter.controllers', ['ngOpenFB'])
             latLng = L.latLng(position.coords.latitude, position.coords.longitude);
         }
 
+
         function showError(error) {
             console.log("There was an error");
         }
         var obj = navigator.geolocation.getCurrentPosition(showPosition, showError, posOpts);
+
+
        L.accessToken = 'pk.eyJ1IjoidHN0ZW50eiIsImEiOiJjaWthc3I3b2kwbTNjdjlrdTdsZjVteGR3In0.DeiyyAsdV3HZdO3YvSA68g';
     // Replace 'mapbox.streets' with your map id.
       var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=' + L.accessToken, {
@@ -102,27 +107,28 @@ angular.module('starter.controllers', ['ngOpenFB'])
         }, 1000);
       };
 
-      var map = L.map('map')
+        var map = L.map('map')
           .addLayer(mapboxTiles)
-          .setView([40.442, -79.943], 17); 
-      function onMapClick(e) {
+          .setView([40.442, -79.943], 17);
+
+    function onMapClick(e) {
         console.log(latLng);
         map.setView(latLng);
         
         }
       var circle1 = L.circleMarker(SSN1, { radius: 10, stroke: true,
-              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+              color: '#bd8cbf', weight: 3, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
       
       var circle2 = L.circleMarker(SSN2, { radius: 10, stroke: true,
-              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+              color: '#bd8cbf', weight: 3, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
       var circle3 = L.circleMarker(SSN3, { radius: 10, stroke: true,
-              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+              color: '#bd8cbf', weight: 3, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
       var circle4 = L.circleMarker(SSN4, { radius: 10, stroke: true,
-              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+              color: '#bd8cbf', weight: 3, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
       var circle5 = L.circleMarker(SSN5, { radius: 10, stroke: true,
-              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+              color: '#bd8cbf', weight: 3, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
       var circle6 = L.circleMarker(SSN6, { radius: 10, stroke: true,
-              color: '#bd8cbf', weight: 5, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
+              color: '#bd8cbf', weight: 3, opacity: 1, fill: true, fillColor:'#6a416b', fillOpacity: 1}).addTo(map);
 
       map.on('click', onMapClick);
       $timeout(function() {
