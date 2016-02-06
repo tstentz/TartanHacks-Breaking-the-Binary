@@ -9744,7 +9744,7 @@ a.button {
   font-size: 50px;
   margin: auto;
   margin-top: 15px;
-  margin-bottom: 55px; }
+  margin-bottom: 25px; }
 
 #login-form {
   margin: auto;
@@ -9759,20 +9759,20 @@ a.button {
     box-shadow: inset 0px 2px 1px 0px rgba(74, 74, 74, 0.48); }
   #login-form .item-input {
     padding-top: 2px;
-    padding-bottom: 5px;
-    padding-right: 72px;
+    padding-bottom: 2px;
+    padding-right: 30px;
     background-color: #eeeeee; }
 
 #facebook-logo {
   margin: auto;
-  margin-top: 60px;
-  width: 275px;
-  height: 55px; }
+  margin-top: 40px;
+  width: 250px;
+  height: 45px; }
 
 #sign-in {
   margin: auto;
   margin-top: 10px;
-  width: 64%;
+  width: 65%;
   border-radius: 14px;
   border-width: 0px;
   color: #444;
@@ -9782,9 +9782,11 @@ a.button {
 
 #account-maintainence {
   color: #D7D6D6;
-  margin: auto; }
+  margin: auto; 
+  width: 230px;
+  }
   #account-maintainence :first-child span {
-    margin-left: 25%; }
+    margin-left: 32%; }
 
 .divider {
   border-left: 1px solid #D7D6D6;

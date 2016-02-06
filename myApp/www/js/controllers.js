@@ -21,7 +21,7 @@ angular.module('starter.controllers', ['ngOpenFB'])
     };
 })
 
-.controller('GeoCtrl', function($scope) {
+.controller('GeoCtrl', function($scope, $ionicModal) {
       document.getElementById("map").style.height = "800px";
         var posOpts = {timeout: 10000, enableHighAccuracy: false};
         var latLng;
