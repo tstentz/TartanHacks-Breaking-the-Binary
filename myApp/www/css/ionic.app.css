@@ -49,6 +49,7 @@ $tiff:                            #6a416b !default;
    height:50px;
    border-radius: 10px;
    width:50px;
+   border-bottom-color: #fff;
 }
 
 .butt:hover {
@@ -7576,7 +7577,7 @@ input,
 button,
 select,
 textarea {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 24px;
   line-height: 1.42857; }
 
