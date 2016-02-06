@@ -39,11 +39,21 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
         controller: 'AppCtrl'
     })
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html',
     controller: 'AppCtrl'
+  })
+  .state('tab.contacts', {
+    url: '/contacts',
+    views: {
+      'tab-contacts': {
+        templateUrl: 'templates/contacts.html'
+        
+        // controller: 'LoginCtrl' //to implement the controller!!! OAuth!
+      }
+    }
   })
 
 
@@ -128,30 +138,6 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
         templateUrl: "main.html"
     })
 
-
-    .state('app.state1', {
-        url: "/state1",
-        views: {
-            'menuContent' :{
-                templateUrl: "state-1-center.html",
-            },
-            'right-menu' : {
-                templateUrl : "state-1-right.html"
-            }
-        }
-    })
-
-    .state('app.state2', {
-        url: "/state2",
-        views: {
-            'menuContent' :{
-                templateUrl: "state-2-center.html"
-            },
-            'right-menu' : {
-                templateUrl : "state-2-right.html"
-            }
-        }
-    })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');

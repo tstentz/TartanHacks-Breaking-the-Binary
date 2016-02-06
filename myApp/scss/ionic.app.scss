@@ -5,14 +5,14 @@ in ionic's _variables.scss file.
 For example, you might change some of the default colors:
 
 $light:                           #fff !default;
-$stable:                          #8f8f8f !default;
-$positive:                        #387ef5 !default;
-$calm:                            #11c1f3 !default;
-$balanced:                        #33cd5f !default;
-$energized:                       #ffc900 !default;
-$assertive:                       #ef473a !default;
-$royal:                           #886aea !default;
-$dark:                            #444    !default;
+$stable:                          #6a416b !default;
+$positive:                        #6a416b !default;
+$calm:                            #6a416b !default;
+$balanced:                        #6a416b !default;
+$energized:                       #6a416b !default;
+$assertive:                       #6a416b !default;
+$royal:                           #6a416b !default;
+$dark:                            #6a416b !default;
 $tiff:                            #6a416b !default;
 */
 
@@ -22,6 +22,64 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.groupcons{
+    background: url('../img/icons.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 65%;
+    margin: auto;
+    z-index: 0;
+    position: relative;
+  }
+
+
+  .continue{
+    background: url('../img/YellowR.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 30%;
+    height: 10%;
+    margin: auto;
+    z-index: 0;
+    position: relative;
+  }
+.Sorg{
+    background: url('../img/Sorg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 54%;
+    height: 95%;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+  }
+
+  .faux-search{
+    background: url('../img/Rect4.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 70%;
+    height: 10%;
+    margin: auto;
+    z-index: 0;
+    position: relative;
+}
+.continue-text
+{
+    background: url('../img/CONTINUE.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    z-index: 2;
+    position: relative;
 
 .welcome-card{
     padding-top:45px;
@@ -147,4 +205,25 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
      right:50%;
      top:95%; 
 }
-
+.bar .title {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    margin: 0 10px;
+    min-width: 30px;
+    height: 43px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 800;
+    line-height: 44px; }
+    .bar .title.title-left {
+      text-align: left; }
+    .bar .title.title-right {
+      text-align: right; }

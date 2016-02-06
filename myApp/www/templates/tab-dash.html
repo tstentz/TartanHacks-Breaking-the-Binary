@@ -1,12 +1,10 @@
 <ion-view view-title="ping">
 
-<h2>Welcome to Ionic</h2>-->
-  <ion-view title="Maps">
-  <search-bar ng-model="search"></search-bar>
-  <button class = "button"> <i class="icon ion-ios-location"></i></button>
-    <ion-content class="has-header padding">
-       
-           <p>This is state 1</p>
+  <h2>Welcome to Ionic</h2>
+    <ion-view title="ping">
+      <search-bar ng-model="search"></search-bar>
+      <ion-content class="has-header padding">
+            <p>This is state 1</p>
           <p>Searchabled items:</p>
           <ul>
             <li ng-repeat="d in data|filter:search.txt">{{d}}</li>
