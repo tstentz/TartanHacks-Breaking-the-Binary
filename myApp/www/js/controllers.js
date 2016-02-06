@@ -23,10 +23,10 @@ angular.module('starter.controllers', ['ngOpenFB'])
 })
 
 .controller('GeoCtrl', function($scope) {
-        console.log("meow");
+      document.getElementById("map").style.height = "800px";
         var posOpts = {timeout: 10000, enableHighAccuracy: false};
         var latLng;
-        function showPosition(position) {
+      function showPosition(position) {
             console.log(position.timestamp);
             console.log(position.coords.latitude);
             console.log(position.coords.longitude);
@@ -47,13 +47,11 @@ angular.module('starter.controllers', ['ngOpenFB'])
       var map = L.map('map')
           .addLayer(mapboxTiles)
           .setView([40, -79], 15); 
-
       function onMapClick(e) {
         console.log(latLng);
         map.setView(latLng);
         
         }
-
       map.on('click', onMapClick);
 
 })
