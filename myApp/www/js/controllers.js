@@ -3,7 +3,7 @@ angular.module('starter.controllers', ['ngOpenFB'])
 .controller('DashCtrl', function($scope) {
     console.log("hi");})
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, ngFB) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, ngFB, $window) {
   $scope.loginData = {};
 
   // currently redirects any user through to the app. 
@@ -13,8 +13,8 @@ angular.module('starter.controllers', ['ngOpenFB'])
       function (response) {
         if (response.status === 'connected') {
           console.log('Facebook login succeeded');
-              $scope.closeLogin();
-              window.location.replace('#/tab/dash')
+              //$scope.closeLogin();
+              $window.location.replace('#/tab/dash')
           } else {
               alert('Facebook login failed');
           }
