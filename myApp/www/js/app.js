@@ -49,8 +49,8 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
     url: '/contacts',
     views: {
       'tab-contacts': {
-        templateUrl: 'templates/contacts.html'
-        
+        templateUrl: 'templates/contacts.html',
+        controller: 'ContactCtrl'
         // controller: 'LoginCtrl' //to implement the controller!!! OAuth!
       }
     }
@@ -85,7 +85,7 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
   //     }
   //   }
   // })
-  
+
  /* .state('tab.chats', {
       url: '/chats',
       views: {

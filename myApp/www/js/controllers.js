@@ -21,6 +21,17 @@ angular.module('starter.controllers', ['ngOpenFB'])
     };
 })
 
+.controller('ContactCtrl', function($scope, $ionicPopup, $timeout, $window) {
+    $scope.someStuff = function() {
+      $window.location.replace('../img/board2.png');
+      // $scope.myPopup = $ionicPopup.show({
+      //     template: '<img src="../img/board2.p" class="button button-full button-energized" ng-click="nearestAvailable()">Nearest Available</button><button class="button button-full button-energized" ng-click="personalGroups()">Personal Groups</button><button class="button button-full button-energized" ng-click="emergencyReport()">Emergency</button>',
+      //     cssClass: 'popup-color',
+      //     title: 'Ping Request',
+      //     scope: $scope,
+      //   });
+    };
+})
 
 .controller('GeoCtrl', function($scope, $ionicPopup, $timeout, $window) {
 
@@ -84,8 +95,7 @@ angular.module('starter.controllers', ['ngOpenFB'])
       //Personal Groups
       $scope.personalGroups = function() {
         $scope.myPopup.close();
-        // $window.location.replace('/#/tab/contacts');
-        $window.location.replace('../img/bell.png');
+        $window.location.replace('/#/tab/contacts');
       };
 
       //Nearest Available
