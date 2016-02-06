@@ -1,4 +1,4 @@
-@charset "UTF-8";
+xf@charset "UTF-8";
 /*!
  * Copyright 2015 Drifty Co.
  * http://drifty.com/
@@ -2598,8 +2598,7 @@
   content: ""; }
 
 .ion-search:before {
-  content: ""; }
-
+  content: "";}
 .ion-settings:before {
   content: ""; }
 
@@ -3006,7 +3005,8 @@ time, mark, audio, video {
   border: 0;
   vertical-align: baseline;
   font: inherit;
-  font-size: 100%; }
+  font-size: 100%;
+  top: 200; }
 
 ol, ul {
   list-style: none; }
@@ -3336,7 +3336,11 @@ body,
   word-wrap: break-word;
   font-size: 14px;
   font-family: -apple-system;
+<<<<<<< HEAD
+  font-family: Avenir, "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+=======
   font-family: "-apple-system", "Avenir", "Roboto", "Segoe UI", sans-serif;
+>>>>>>> e6d6009db9ff8b19e07e96c3d9304ab5dce22311
   line-height: 20px;
   text-rendering: optimizeLegibility;
   -webkit-backface-visibility: hidden;
@@ -3933,6 +3937,19 @@ a.subdued {
       color: #444; }
     .bar.bar-stable.bar-footer {
       background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%); }
+      .bar.bar-tiff {
+    border-color: #b2b2b2;
+    background-color: #6a416b;
+    background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
+    color: #444; }
+
+    .bar.bar-tiff .title {
+      color: #f3d226;
+      font-weight: 24px;
+    }
+    .bar.bar-tiff.bar-footer {
+      background-image: linear-gradient(180deg, #b2b2b2, #b2b2b2 50%, transparent 50%); }
+
   .bar.bar-positive {
     border-color: #0c60ee;
     background-color: #387ef5;
@@ -4010,8 +4027,8 @@ a.subdued {
     text-align: center;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: bold;
     line-height: 44px; }
     .bar .title.title-left {
       text-align: left; }
@@ -4130,6 +4147,26 @@ a.subdued {
     color: #444;
     font-size: 17px; }
   .bar-stable .button.button-icon {
+    border-color: transparent;
+    background: none; }
+
+
+.bar-tiff .button {
+  border-color: transparent;
+  background-color: #6a416b;
+  color: #444; }
+  .bar-toff .button:hover {
+    color: #444;
+    text-decoration: none; }
+  .bar-tiff .button.active, .bar-stable .button.activated {
+    background-color: #e5e5e5; }
+  .bar-toff .button.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #444;
+    font-size: 17px; }
+  .bar-tiff .button.button-icon {
     border-color: transparent;
     background: none; }
 
@@ -5067,7 +5104,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
   white-space: nowrap;
   font-weight: 400;
   font-size: 14px;
-  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+  font-family: Avenir, "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   opacity: 0.7; }
   .tab-item:hover {
     cursor: pointer; }
@@ -7491,7 +7528,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif; }
+  font-family: Avenir, "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif; }
 
 .item-input {
   display: -webkit-box;
@@ -9727,3 +9764,45 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+  searchBar {
+  color: #fff;
+  margin: 0 !important;
+  padding: 0;
+}
+.searchBar .icon {
+  font-size: 27px;
+  line-height: 1.2;
+  padding-right: 6px;
+  padding-left: 6px;
+}
+.searchBar .searchTxt {
+  border-bottom: 1px solid #fff;
+  left: 55px;
+  width: calc(100% - 100px);
+  position: fixed;
+  height: calc(100% - 10px);
+}
+.searchBar.numicons2 .searchTxt {
+  width: calc(100% - 135px);
+}
+.searchBar .searchTxt > .bgdiv {
+  background-color: #aaa;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.3;
+}
+.searchBar .searchTxt > .bgtxt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.searchBar .searchTxt input {
+  background-color: inherit;
+  color: #fff;
+  padding-left: 5px;
+  padding-right:5px;
+}
