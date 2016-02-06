@@ -9782,9 +9782,8 @@ a.button {
 
 #account-maintainence {
   color: #D7D6D6;
-  margin: auto; 
-  width: 230px;
-  }
+  margin: auto;
+  width: 230px; }
   #account-maintainence :first-child span {
     margin-left: 32%; }
 
