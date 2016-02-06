@@ -21,46 +21,9 @@ angular.module('starter.controllers', ['ngOpenFB'])
     };
 })
 
-.controller('PopUpCtrl', function($scope, $ionicPopup, $timeout) {
-      // Triggered in the login modal to close it
-      $scope.closePingRequest = function() {
-        $scope.modal.hide();
-      };
 
-      // Open the login modal
-      function ping_pop_up($scope) {
-        $scope.myPopup = $ionicPopup.show({
-            template: '<button class="button button-full button-energized" ng-click="nearestAvailable()">Nearest Available</button><button class="button button-full button-energized" ng-click="personalGroups()">Personal Groups</button><button class="button button-full button-energized" ng-click="emergencyReport()">Emergency</button>',
-            cssClass: 'popup-color',
-            title: 'Ping Request',
-            scope: $scope,
-          });
-        
-      };
-
-      //Emergency Reporting
-      $scope.emergencyReport = function() {
-        $scope.myPopup.close();
-      };
-
-      //Personal Groups
-      $scope.personalGroups = function() {
-        $scope.myPopup.close();
-      };
-
-      //Nearest Available
-      $scope.nearestAvailable = function() {
-        $scope.myPopup.close();
-        $scope.hold_on_information = $ionicPopup.show({
-            template: '<ion-spinner></ion-spinner>',
-            title: 'Contacting nearest SSN mentor',
-            subTitle: 'Thank you for doing the right thing and acting on the situation. You will be anonymously be connected to a trained SSN peer mentor as soon as possible who can provide advice that is situation specific',
-            scope: $scope,
-          });
-      };
-
-}
 .controller('GeoCtrl', function($scope, $ionicPopup, $timeout) {
+
       document.getElementById("map").style.height = "100vh";
         var posOpts = {timeout: 10000, enableHighAccuracy: false};
         var latLng;
@@ -98,6 +61,50 @@ angular.module('starter.controllers', ['ngOpenFB'])
       //   $scope.modal = modal;
       // });
 
+      // Triggered in the login modal to close it
+      $scope.closePingRequest = function() {
+        $scope.modal.hide();
+      };
+
+      // Open the login modal
+      $scope.ping_pop_up = function() {
+        $scope.myPopup = $ionicPopup.show({
+            template: '<button class="button button-full button-energized" ng-click="nearestAvailable()">Nearest Available</button><button class="button button-full button-energized" ng-click="personalGroups()">Personal Groups</button><button class="button button-full button-energized" ng-click="emergencyReport()">Emergency</button>',
+            cssClass: 'popup-color',
+            title: 'Ping Request',
+            scope: $scope,
+          });
+      };
+
+      //Emergency Reporting
+      $scope.emergencyReport = function() {
+        $scope.myPopup.close();
+      };
+
+      //Personal Groups
+      $scope.personalGroups = function() {
+        $scope.myPopup.close();
+      };
+
+      //Nearest Available
+      $scope.nearestAvailable = function() {
+        $scope.myPopup.close();
+        $scope.hold_on_information = $ionicPopup.show({
+            template: '<ion-spinner></ion-spinner>',
+            title: 'Contacting nearest SSN mentor',
+            subTitle: 'Thank you for doing the right thing and acting on the situation. You will be anonymously be connected to a trained SSN peer mentor as soon as possible who can provide advice that is situation specific',
+            scope: $scope,
+          });
+      };
+
+      // Perform the login action when the user submits the login form
+      $scope.doLogin = function() {
+        // Simulate a login delay. Remove this and replace with your login
+        // code if using a login system
+        $timeout(function() {
+          $scope.closeLogin();
+        }, 1000);
+      };
 
         var map = L.map('map')
           .addLayer(mapboxTiles)

@@ -76,6 +76,16 @@ angular.module('starter', ['ionic','ionic.service.core', 'starter.controllers', 
     }
   })
 
+  // .state('tab.popupmodal', {
+  //   url: '/dash',
+  //   views: {
+  //     'tab-dash': {
+  //       templateUrl: 'templates/tab-dash.html',
+  //       controller: 'PopUpCtrl'
+  //     }
+  //   }
+  // })
+  
  /* .state('tab.chats', {
       url: '/chats',
       views: {
