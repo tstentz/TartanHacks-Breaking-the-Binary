@@ -23,6 +23,7 @@ angular.module('starter.controllers', ['ngOpenFB'])
 })
 
 .controller('GeoCtrl', function($scope) {
+        console.log("meow");
         var posOpts = {timeout: 10000, enableHighAccuracy: false};
         var latLng;
         function showPosition(position) {
